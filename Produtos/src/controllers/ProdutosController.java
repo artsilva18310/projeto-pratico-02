@@ -1,6 +1,8 @@
 package controllers;
 
 import java.util.ArrayList;
+
+import models.Loja;
 import models.ProdutosModels;
 
 public class ProdutosController {
@@ -15,8 +17,8 @@ public class ProdutosController {
         p.setId(serial);
         produtosArrayList.add(p);
         serial += 1;
-    } 
-    
+    }
+
     public void print() {
         System.out.println("####### Consultando produto #######");
         for (int i = 0; i < produtosArrayList.size(); i++) {
@@ -38,6 +40,9 @@ public class ProdutosController {
     public void delete(ProdutosModels p) {
         produtosArrayList.remove(p);
     }
+
+
+    
 
     public void sizeArray() {
         System.out.println(produtosArrayList.size());
